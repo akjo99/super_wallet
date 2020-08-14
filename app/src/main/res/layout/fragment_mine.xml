@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.classic.common.MultipleStatusView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/msv_status"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:loadingView="@layout/custom_loading_view">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f7f7f7"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/iv_mine_bg"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/ic_mine_bg">
+
+            <TextView
+                android:id="@+id/tv_mine_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:text="Me"
+                android:visibility="invisible"
+                android:textColor="@color/colorBlack"
+                android:textSize="23sp" />
+
+
+            <ImageView
+                android:id="@+id/iv_setting"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_exit" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/ic_me_logo"/>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/tv_credit"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_credit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Credit rating - EXCELLENT"
+            android:layout_alignBottom="@id/iv_mine_bg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:paddingTop="5dp"
+            android:textSize="18sp"
+            android:paddingBottom="5dp"
+            android:visibility="visible" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_credit"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-30dp"
+            android:orientation="vertical"
+            android:background="@drawable/shape_black40_irregular"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <ImageView
+                android:id="@+id/tv_my_quota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_alignBottom="@id/iv_mine_bg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:src="@drawable/ic_me_btn"
+                android:visibility="invisible" />
+
+            <RelativeLayout
+                android:id="@+id/ll_person_information"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorWhite"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_img1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_personal" />
+
+                <TextView
+                    android:id="@+id/tv_name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/iv_img1"
+                    android:text="Person Information"
+                    android:textColor="@color/colorGray"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_right" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#f5f5f5" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_mine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_my_quota"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/shape_1a1_10"
+                android:overScrollMode="never" />
+
+            <RelativeLayout
+                android:id="@+id/ll_edit"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorWhite">
+
+                <ImageView
+                    android:id="@+id/iv_img2"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_me_exit" />
+
+                <TextView
+                    android:id="@+id/tv_name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/iv_img2"
+                    android:text="Exit"
+                    android:textColor="@color/colorGray"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_right" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#f5f5f5" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#f6f3f7"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+</com.classic.common.MultipleStatusView>

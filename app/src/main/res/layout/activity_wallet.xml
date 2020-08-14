@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.classic.common.MultipleStatusView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/msv_status"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorThemeBg"
+    app:loadingView="@layout/custom_loading_view">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/view_wallet"
+                android:layout_width="match_parent"
+                android:layout_height="330dp" />
+
+            <RelativeLayout
+                android:id="@+id/titleRelative"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="65dp">
+
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/ic_arrow_left" />
+
+                <TextView
+                    android:id="@+id/tv_titles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="Wallet"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18.0sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_text7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleRelative"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
+                android:text=""
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_amount"
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ic_wallet_bg"
+                android:padding="27dp"
+                android:layout_below="@+id/tv_text7">
+
+                <TextView
+                    android:id="@+id/tv_loan_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loan Amount"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_my_quota"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="20000"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="34sp" />
+
+                <TextView
+                    android:id="@+id/tv_bank_number"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@null"
+                    android:drawableRight="@drawable/ic_modify"
+                    android:drawablePadding="5dp"
+                    android:text="* * * *   * * * *   * * * *"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/tv_bank_number"
+                    android:text="Card Number"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_text6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tv_text6_1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="30dp"
+                android:text=""
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_text6_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/ll_para"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:text=""
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_my_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_wallet"
+                android:layout_marginLeft="20dp"
+                android:text="Account Details"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+            <View
+                android:id="@+id/view_detail"
+                android:layout_below="@+id/tv_my_detail"
+                android:layout_width="30dp"
+                android:layout_height="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:background="@color/colorFD9"/>
+
+            <LinearLayout
+                android:id="@+id/ll_para"
+                android:layout_below="@+id/view_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/shape_1a1_10"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_amount_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+                    
+                    <ImageView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="26dp"
+                        android:layout_height="31dp"
+                        android:src="@drawable/ic_wallet_1"
+                        android:layout_gravity="center_vertical"/>
+                    
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp">
+                        <TextView
+                            android:id="@+id/tv_interest_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Available Credit"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_text7_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="Available Credit"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/tv_amount_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="20dp"
+                        android:text="10000"
+                        android:textColor="@color/colorFF2"
+                        android:textSize="20sp" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/ic_me_line" />
+
+                <LinearLayout
+                    android:id="@+id/ll_amount_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <ImageView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="26dp"
+                        android:layout_height="31dp"
+                        android:src="@drawable/ic_wallet_2"
+                        android:layout_gravity="center_vertical"/>
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp">
+                        <TextView
+                            android:id="@+id/tv_interest_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Transferred"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_text7_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="Available Credit"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/tv_amount_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="20dp"
+                        android:text="10000"
+                        android:textColor="@color/colorFF2"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/ic_me_line" />
+
+                <LinearLayout
+                    android:id="@+id/ll_amount_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <ImageView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="26dp"
+                        android:layout_height="31dp"
+                        android:src="@drawable/ic_wallet_3"
+                        android:layout_gravity="center_vertical"/>
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp">
+                        <TextView
+                            android:id="@+id/tv_interest_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Interest on deposit"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_text7_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="Available Credit"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/tv_amount_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="20dp"
+                        android:text="10000"
+                        android:textColor="@color/colorFF2"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_my_bill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_para">
+
+                <TextView
+                    android:id="@+id/tv_my_bill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="My Bill"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp" />
+
+                <View
+                    android:id="@+id/view_my_bill"
+                    android:layout_below="@+id/tv_my_bill"
+                    android:layout_width="30dp"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/colorFD9"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rc_wallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_my_bill"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="20dp"
+                    android:paddingBottom="20dp"
+                    android:overScrollMode="never"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_no_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_my_bill"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/yet_bg" />
+
+                <TextView
+                    android:id="@+id/tv_text7_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_no_data"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="You don't have a transaction record
+Go and borrow some money" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_sumbit"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/rl_my_bill"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/basic_btn"
+                android:gravity="center"
+                android:text="GET LOANS"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</com.classic.common.MultipleStatusView>

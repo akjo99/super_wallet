@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorThemeBg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/titleRelative"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="65dp">
+
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/ic_arrow_left" />
+
+        <TextView
+            android:id="@+id/tv_titles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+
+            android:text="Authentication"
+            android:textColor="@color/colorWhite"
+            android:textSize="18.0sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_auth"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/titleRelative"
+        android:background="@color/colorGray"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tv_text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleRelative"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp" />
+
+
+    <TextView
+        android:id="@+id/tv_text5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleRelative"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="there will be have text"
+        android:textColor="@color/colorGray"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+
+    <com.classic.common.MultipleStatusView
+        android:id="@+id/msv_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_text3"
+        android:layout_marginTop="10dp"
+        app:loadingView="@layout/custom_loading_view">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/rl_ident"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12.5dp"
+                    android:layout_marginRight="12.5dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="30dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_image_test"
+                        android:layout_width="170dp"
+                        android:layout_height="110dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/photo_box"
+                        android:padding="12dp">
+
+                        <ImageView
+                            android:id="@+id/iv_image_test"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/tv_text3"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/identity_front" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_toLeftOf="@+id/ll_image_test"
+                        android:layout_marginTop="60dp">
+                        
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="click to upload"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PAN/AADHAAR"
+                            android:textColor="#fdd945"
+                            android:textSize="17sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="positive"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="16sp"/>
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_text3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ll_image_test"
+                        android:layout_marginTop="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:text=" is sufficient and face the camera."
+                        android:textColor="@color/colorAAA"
+                        android:visibility="invisible"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_image_test_2"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="170dp"
+                        android:layout_height="110dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_below="@id/tv_text3_1"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/photo_box"
+                        android:padding="12dp">
+
+                        <ImageView
+                            android:id="@+id/iv_image_test_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/tv_text3"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/identity_back" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_below="@id/tv_text3_1"
+                        android:layout_toLeftOf="@+id/ll_image_test_2"
+                        android:layout_marginTop="60dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="click to upload"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PAN/AADHAAR"
+                            android:textColor="#fdd945"
+                            android:textSize="17sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="reverse"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="16sp"/>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_text3_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ll_image_test_2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:text=" is sufficient and face the camera."
+                        android:visibility="invisible"
+                        android:textColor="@color/colorAAA"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_text3_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/rl_ident"
+                    android:text=" is sufficient and face the camera."
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_sumbit"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/tv_text3_3"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="50dp"
+                    android:background="@drawable/basic_btn"
+                    android:gravity="center"
+                    android:text="Next"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </com.classic.common.MultipleStatusView>
+
+</RelativeLayout>

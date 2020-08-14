@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sup.superwallet">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@drawable/icon_logo"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@drawable/icon_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.MainActivity" />
+        <activity
+            android:name=".activity.LauncherActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <data android:scheme="yourapp" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="nr367.app.link"
+                    android:scheme="https" />
+                <!-- example-alternate domain is required for App Links when the Journeys/Web SDK and Deepviews are used inside your website.  -->
+                <data
+                    android:host="nr367-alternate.app.link"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.InformationActivity" />
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.WebActivity" />
+        <activity android:name=".activity.AuthenticationActivity" />
+        <activity android:name=".activity.EmploymentActivity" />
+        <activity android:name=".activity.BankActivity" />
+        <activity android:name=".activity.PayActivity" />
+        <activity android:name=".activity.QuitActivity" />
+        <activity android:name=".base.BaseActivity" />
+        <activity android:name=".activity.CameraStepActivity" />
+        <activity android:name=".activity.IDAuthActivity" />
+        <activity android:name=".activity.BaseInforActivity" />
+        <activity android:name=".activity.WalletActivity" />
+        <activity android:name=".activity.NewBaseInforActivity" />
+        <activity android:name=".activity.NewPayActivity" />
+        <activity
+            android:name="com.razorpay.CheckoutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges= "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <!-- Branch init -->
+        <meta-data
+            android:name="io.branch.sdk.BranchKey"
+            android:value="key_live_mpQ1wOtJ1Xpvoqykr4ip0cacExdkVMez" />
+        <meta-data
+            android:name="io.branch.sdk.BranchKey.test"
+            android:value="key_test_gfT5rMsI3WnAiwqmB2fk8ibbvDbiISfh" />
+        <meta-data
+            android:name="io.branch.sdk.TestMode"
+            android:value="false" />     <!-- Set to true to use Branch_Test_Key (useful when simulating installs and/or switching between debug and production flavors) -->
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_R2oCIrTkyM4LqA" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+    </application>
+</manifest>

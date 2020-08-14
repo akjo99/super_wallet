@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/colorThemeBg"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="290dp" />
+
+    <ImageView
+        android:layout_alignParentRight="true"
+        android:layout_width="130.5dp"
+        android:layout_height="126.5dp"
+        android:src="@drawable/home_top_bg"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Loan Man"
+        android:textStyle="bold"
+        android:textSize="23sp"
+        android:visibility="invisible"
+        android:textColor="@color/colorWhite"/>
+
+    <TextView
+        android:id="@+id/tv_super"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUPER WALLET"
+        android:layout_marginTop="80dp"
+        android:textSize="20sp"
+        android:textColor="@color/colorWhite"
+        android:layout_marginLeft="25dp"/>
+
+    <TextView
+        android:id="@+id/tv_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_super"
+        android:text="Give you a better loan experience"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="5dp"
+        android:textSize="15sp"
+        android:layout_marginLeft="25dp"/>
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@+id/tv_text1"
+        android:src="@drawable/dc_home_bg"/>
+
+
+
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:src="@drawable/dc_home_bg" />
+
+    <com.classic.common.MultipleStatusView
+        android:id="@+id/msv_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/iv_image"
+        app:loadingView="@layout/custom_loading_view">
+        
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="320dp"
+            android:text="Recommend"
+            android:textSize="20sp"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="20dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_product"
+            android:layout_below="@+id/tv_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" />
+    </com.classic.common.MultipleStatusView>
+</RelativeLayout>

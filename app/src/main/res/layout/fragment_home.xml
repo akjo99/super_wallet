@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.classic.common.MultipleStatusView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/msv_status"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:loadingView="@layout/custom_loading_view">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorThemeBg"
+            android:orientation="vertical">
+            
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:layout_width="130.5dp"
+                android:layout_height="126.5dp"
+                android:src="@drawable/home_top_bg"/>
+
+            <TextView
+                android:id="@+id/tv_super"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SUPER WALLET"
+                android:layout_marginTop="80dp"
+                android:textSize="20sp"
+                android:textColor="@color/colorWhite"
+                android:layout_marginLeft="25dp"/>
+
+            <TextView
+                android:id="@+id/tv_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_super"
+                android:text="SUPER WALLET"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="5dp"
+                android:textSize="15sp"
+                android:layout_marginLeft="25dp"/>
+            
+            <LinearLayout
+                android:id="@+id/ll_amount_data"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:layout_below="@+id/tv_text1"
+                android:orientation="vertical"
+                android:background="@drawable/ic_home_bg">
+                <TextView
+                    android:id="@+id/tv_max"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="20000"
+                    android:textSize="60sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tv_text1_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Maximum loan amount(₹)"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_apply"
+                android:layout_below="@+id/ll_amount_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apply for Your Personal Loan in just 4 simple steps"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp" />
+            <View
+                android:id="@+id/view_apply"
+                android:layout_below="@+id/tv_apply"
+                android:layout_width="30dp"
+                android:layout_height="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="25dp"
+                android:background="@color/colorFD9"/>
+            
+            <LinearLayout
+                android:id="@+id/ll_home_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_below="@+id/view_apply"
+                android:layout_marginTop="25dp">
+
+                <TextView
+                    android:id="@+id/tv_progress_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Register an account"
+                    android:textSize="10sp"
+                    android:textColor="@color/colorWhite"
+                    android:drawableTop="@drawable/ic_teps_1"
+                    android:drawablePadding="10dp"/>
+                <TextView
+                    android:id="@+id/tv_progress_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/colorWhite"
+                    android:text="Personal profile"
+                    android:textSize="10sp"
+                    android:drawableTop="@drawable/ic_teps_2"
+                    android:drawablePadding="10dp"/>
+                <TextView
+                    android:id="@+id/tv_progress_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/colorWhite"
+                    android:text="Get instant approval"
+                    android:textSize="10sp"
+                    android:drawableTop="@drawable/ic_tips_3"
+                    android:drawablePadding="10dp"/>
+                <TextView
+                    android:id="@+id/tv_progress_4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/colorWhite"
+                    android:text="Get money"
+                    android:textSize="10sp"
+                    android:drawableTop="@drawable/ic_tips_4"
+                    android:drawablePadding="10dp"/>
+            </LinearLayout>
+            
+            <ProgressBar
+                android:layout_marginTop="10dp"
+                android:id="@+id/progress_home"
+                android:layout_below="@+id/ll_home_progress"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:progressDrawable="@drawable/progress_home"
+                android:layout_height="10dp"
+                android:indeterminateOnly="false"
+                android:progress="0"
+                android:max="100"/>
+            
+            <TextView
+                android:id="@+id/tv_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_home_progress"
+                android:layout_alignRight="@+id/progress_home"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="5dp"
+                android:text="0%"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tv_home_borrow"
+                android:layout_width="match_parent"
+                android:layout_marginTop="40dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/progress_home"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/basic_btn"
+                android:gravity="center"
+                android:text="GET NOW"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</com.classic.common.MultipleStatusView>
